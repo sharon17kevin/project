@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clip-path-diagonal {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.clip-path-hexagonal {
+    clip-path: polygon(25% 0, 99% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
+}
+
+.clip-path-trapeziodal {
+    clip-path: polygon(2% 0%, 98% 0%, 100% 100%, 0% 100%);
+}
