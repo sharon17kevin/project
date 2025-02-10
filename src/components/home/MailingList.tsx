@@ -1,3 +1,5 @@
+import InputField from "../InputField";
+
 const MailingList = () => {
   return (
     <div className="w-full h-80 p-4 flex flex-col justify-center items-center bg-[radial-gradient(circle_200px_at_bottom_center,_#272E8E,_#0B0D28)]">
@@ -7,7 +9,7 @@ const MailingList = () => {
           Services
         </p>
       </div>
-      <div className="bg-white w-1/4 h-14 rounded-full"></div>
+      <InputField/>
     </div>
   );
 };

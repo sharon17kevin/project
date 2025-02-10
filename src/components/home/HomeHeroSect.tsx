@@ -1,4 +1,7 @@
 import landing from "../../assets/home_landing.webp";
+import Collection from "../../icons/Collection";
+import Eco from "../../icons/Eco";
+import Notepad from "../../icons/Notepad";
 
 const HomeHeroSect = () => {
   return (
@@ -23,8 +26,9 @@ const HomeHeroSect = () => {
         </div>
         <div className="flex flex-wrap">
           {/* First Div - Hidden below md */}
-          <div className="hidden md:block md:w-1/4 h-40 items-center justify-center text-white">
-            First Div
+          <div className="hidden md:block md:w-1/4 h-40 items-center justify-center font-ebgaramond font-light text-ellipsis text-gray-500 px-4 lg:px-10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
 
           {/* Second Div - Hidden Triangle below md */}
@@ -33,36 +37,42 @@ const HomeHeroSect = () => {
           {/* Third Div - Always Visible */}
           <div className="w-full justify-around md:flex-1 h-40 bg-white flex items-center text-white">
             {/* First Div */}
-            <div className="w-1/4 h-24 flex flex-col px-3 bg-blue-500 text-white items-start justify-center">
+            <div className="w-1/4 h-24 flex flex-col px-3 text-white items-start justify-center">
               {/* Icon */}
               <span className="text-blue-500 text-2xl">
-                📘 {/* Replace this with your icon component or library */}
+                <Collection />
               </span>
 
               {/* Text */}
-              <span className="text-gray-700 font-medium">Example Text</span>
+              <span className="text-gray-700 font-darkerGrotesque font-semibold text-lg lg:text-2xl">
+                X Years Of Experience
+              </span>
             </div>
 
             {/* Second Div */}
-            <div className="w-1/4 h-24 flex flex-col px-3 bg-blue-500 text-white items-start justify-center">
+            <div className="w-1/4 h-24 flex flex-col px-3 text-white items-start justify-center">
               {/* Icon */}
               <span className="text-blue-500 text-2xl">
-                📘
+                <Notepad />
               </span>
 
               {/* Text */}
-              <span className="text-gray-700 font-medium">Second Text</span>
+              <span className="text-gray-700 font-darkerGrotesque font-semibold text-lg lg:text-2xl">
+                20+ Projects completed
+              </span>
             </div>
 
             {/* Third Div */}
-            <div className="w-1/4 h-24 flex flex-col px-3 bg-blue-500 text-white items-start justify-center">
+            <div className="w-1/4 h-24 flex flex-col px-3 text-white items-start justify-center">
               {/* Icon */}
               <span className="text-blue-500 text-2xl">
-                📘 {/* Replace this with your icon component or library */}
+                <Eco />
               </span>
 
               {/* Text */}
-              <span className="text-gray-700 font-medium">Third Text</span>
+              <span className="text-gray-700 font-darkerGrotesque font-semibold text-lg lg:text-2xl">
+                Eco-concerned
+              </span>
             </div>
           </div>
         </div>

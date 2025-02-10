@@ -1,5 +1,5 @@
-import { Globe, Phone, Wifi } from "lucide-react";
-import circleTextButton from '../../assets/Circle Button.png'
+import { Link } from "react-router-dom";
+import circleTextButton from "../../assets/Circle Button.png";
 
 const ServicesSection = () => {
   return (
@@ -20,26 +20,22 @@ const ServicesSection = () => {
           <div className=" grid w-8/9 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Wifi className="h-8 w-8 text-black" />,
                 description: "Building Network Infrastructure",
               },
               {
-                icon: <Phone className="h-8 w-8 text-black" />,
                 description:
                   "Maintaining and Renovation of Network Infrastructure",
               },
               {
-                icon: <Globe className="h-8 w-8 text-black" />,
                 description: "Setting Up Solar Panels and Batteries",
               },
               {
-                icon: <Globe className="h-8 w-8 text-black" />,
                 description: "Performing Energy Audits",
               },
             ].map((service, index) => (
               <div key={index} className="flex">
                 <div className="flex items-center bg-primary px-5 py-3 rounded-full shadow-sm hover:shadow-md transition-shadow">
-                  <div>{service.icon}</div>
+                  <div className="w-4 h-4 bg-black rounded-full"></div>
                   <p className="font-ebgaramond ms-1 text-center text-sm md:text-base text-black">
                     {service.description}
                   </p>
@@ -58,13 +54,13 @@ const ServicesSection = () => {
 
         {/* Center Button */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <button className="px-6 py-3 text-white font-bold rounded-lg transition-transform transform hover:scale-110">
+          <Link to={'/services'} className="px-6 py-3 text-white font-bold rounded-lg transition-transform transform hover:scale-110">
             <img
-              src= {circleTextButton}
+              src={circleTextButton}
               alt="Button Icon"
               className="h-34 w-40"
             />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

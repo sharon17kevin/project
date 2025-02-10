@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        2000: '2000ms', // Example of a 2-second duration
+      },
       width: {
         88 : '22rem', // Add custom width between 80 and 96
       },
@@ -22,7 +25,7 @@ export default {
         secondary: '#524CF2',
         darkestMain: '#0B0D28',
         customBlue: {
-          light: '#E2E2FF',
+          light: '#F7F7F8',
           DEFAULT: '#CBCBFF',
           dark: '#0B0D28',
         },
