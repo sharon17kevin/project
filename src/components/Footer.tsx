@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../icons/Logo";
 
 const Footer = () => {
@@ -20,9 +21,9 @@ const Footer = () => {
             <h4 className=" font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-secondary">
+                <Link to="/about" className="hover:text-secondary">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-secondary">
@@ -40,19 +41,14 @@ const Footer = () => {
             <h4 className=" font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-secondary">
+                <Link to="/contact" className="hover:text-secondary">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary">
+                <Link to="/faq" className="hover:text-secondary">
                   FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary">
-                  Network Status
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -60,25 +56,25 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-secondary">
+                <Link to="/legallayout/privacy" className="hover:text-secondary">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary">
+                <Link to="/legallayout/termsofuse" className="hover:text-secondary">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary">
-                  Accessibility
-                </a>
+                <Link to="/legallayout/legal" className="hover:text-secondary">
+                  Legal
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
-          <p>&copy; 2025  KelvicTech. All rights reserved.</p>
+          <p>&copy; 2025 KelvicTech. All rights reserved.</p>
         </div>
       </div>
     </footer>

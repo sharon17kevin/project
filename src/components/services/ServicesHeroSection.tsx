@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import audit from '../../assets/audit.webp';
-import handBulb from '../../assets/hand-bulb.webp'
+import audit from "../../assets/audit.webp";
+import handBulb from "../../assets/hand-bulb.webp";
 import Carousel from "../Carousel";
 
 interface ItemProps {
@@ -23,7 +23,9 @@ const CarouselContent = ({ title, subtitle, image = audit }: ItemProps) => {
               {subtitle}
             </p>
           </div>
-          <button className="bg-primary mt-4 px-5 py-2 rounded-full text-black md:text-lg">Learn More</button>
+          <button className="bg-primary mt-4 px-5 py-2 rounded-full text-black md:text-lg">
+            Learn More
+          </button>
         </div>
 
         {/* Second Column/Row */}
@@ -43,20 +45,23 @@ const CarouselContent = ({ title, subtitle, image = audit }: ItemProps) => {
 
 const content = [
   {
-    title: "Fast-track your way to sustainable energy operations",
-    subtitle: "Fast-track your way to sustainable energy operations",
+    title: "Seamless Connectivity for Uninterrupted Operations",
+    subtitle:
+      "Robust telecom mast connections for high-speed, stable, and scalable business communication.",
     image: audit,
   },
   {
-    title: "OKOKOLorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    subtitle: "Fast-track your way to sustainable energy operations",
+    title: "Clean, Reliable, and Cost-Effective Power",
+    subtitle:
+      "Custom solar energy systems designed to lower expenses, ensure reliability, and support a greener future.",
     image: handBulb,
   },
   {
-    title: "NIKNINNLorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    subtitle: "Fast-track your way to sustainable energy operations",
+    title: "Optimize Your Power Usage for Maximum Efficiency",
+    subtitle:
+      "Comprehensive energy assessments to reduce costs, improve efficiency, and enhance sustainability.",
     image: audit,
-  }
+  },
 ];
 
 const slideList = content.map((slide) => {
@@ -70,9 +75,11 @@ const slideList = content.map((slide) => {
 });
 
 const ServicesHeroSection = () => {
-  return <div className="w-full py-8">
-    <Carousel slides={slideList as [ReactNode]} />
-  </div>;
+  return (
+    <div className="w-full py-8">
+      <Carousel slides={slideList as [ReactNode]} />
+    </div>
+  );
 };
 
 export default ServicesHeroSection;

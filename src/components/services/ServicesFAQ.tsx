@@ -1,6 +1,9 @@
 import ExpandableTile from "../ExpandableTile";
+import faqData from "../../data/faqData";
+import { Link } from "react-router-dom";
 
 const ServicesFAQ = () => {
+  const data = [faqData[0], faqData[4], faqData[9]];
   return (
     <section id="plans" className="pt-10 bg-primary">
       <div className="max-w-7xl mx-auto pb-10 px-4 sm:px-6 lg:px-8">
@@ -11,22 +14,26 @@ const ServicesFAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="font-ebgaramond text-sm md:text-base text-black mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Find Answers to Common Queries About Our Services and Solutions
             </p>
             <div>
-              <button className="bg-gray-300 px-5 py-2 text-black border-black border-[1px]">
+              <Link
+                to="/faq"
+                className="bg-gray-300 px-5 py-2 text-black border-black border-[1px]"
+              >
                 More
-              </button>
+              </Link>
             </div>
           </div>
           {/* Second Column/Row */}
           <div className="flex-1 flex-col p-4  items-center justify-center space-y-4">
-            <ExpandableTile title="vvkffk" description="vkdkvdv"/>
-            <ExpandableTile title="vvkffk" description="vkdkvdv"/>
-            <ExpandableTile title="vvkffk" description="vkdkvdv"/>
+            {data.map((data, index) => (
+              <ExpandableTile
+                key={index}
+                title={data.question}
+                description={data.answer}
+              />
+            ))}
           </div>
         </div>
       </div>
