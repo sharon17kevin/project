@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
 import circleTextButton from "../../assets/Circle Button.png";
+import { RevealAnimation } from "../RevealAnimation";
 
 const ServicesSection = () => {
   return (
     <section id="services" className="pt-20 bg-white">
-      <div className="items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-darkerGrotesque text-center text-2xl md:text-3xl font-semibold text-black mb-1">
-          The Services We Provide
-        </h2>
+      <div className="flex justify-center flex-col items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RevealAnimation>
+          <h2 className="font-darkerGrotesque text-center text-2xl md:text-3xl font-semibold text-black mb-1">
+            The Services We Provide
+          </h2>
+        </RevealAnimation>
         <div className="flex justify-center w-full">
           <div className="flex align-middle w-full md:w-2/5">
-            <h3 className="font-ebgaramond text-center text-sm md:text-base text-black mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h3>
+            <RevealAnimation>
+              <h3 className="font-ebgaramond text-center text-sm md:text-base text-black mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h3>
+            </RevealAnimation>
           </div>
         </div>
         <div className="flex justify-center w-full mt-2">

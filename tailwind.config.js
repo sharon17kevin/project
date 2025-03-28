@@ -18,7 +18,7 @@ export default {
       fontFamily: {
         darkerGrotesque: ['Darker Grotesque', 'serif'],
         roboto: ['Roboto', 'serif'],
-        ebgaramond: ['EB Garamond', 'serif']
+        ebgaramond: ['EB Garamond', 'serif'],
       },
       colors: {
         primary: '#E2E2FF',
