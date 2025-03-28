@@ -6,12 +6,16 @@ interface RevealProps {
   children: React.ReactNode;
   width?: "fit-content" | "100%";
   delay?: number;
+  x_hidden?: number;
+  y_hidden?: number;
 }
 
 export const RevealAnimation: React.FC<RevealProps> = ({ 
   children, 
   width = "fit-content",
-  delay = 0 
+  delay = 0,
+  x_hidden = 0,
+  y_hidden = 75
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -23,8 +27,8 @@ export const RevealAnimation: React.FC<RevealProps> = ({
     <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 }
+          hidden: { opacity: 0, y: y_hidden, x: x_hidden},
+          visible: { opacity: 1, y: 0, x: 0 }
         }}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
