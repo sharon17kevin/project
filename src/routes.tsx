@@ -12,6 +12,7 @@ import { TermsOfUse } from "./pages/TermsOfUsePage";
 import { Legal } from "./pages/LegalPage";
 import { LegalLayout } from "./components/LegalLayout";
 import Cart from "./pages/CartPage";
+import Careers from "./pages/Careers";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
       { path: "/services", element: <ServicesPage /> },
       { path: "/products", element: <ProductsPage /> },
       { path: "/faq", element: <Faq /> },
+      { path: "/contact", element: <ContactsPage /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/careers", element: <Careers /> },
       {
         path: "/legallayout",
         element: <LegalLayout />,
@@ -33,8 +37,6 @@ const router = createBrowserRouter([
           { path: "/legallayout/legal", element: <Legal /> },
         ],
       },
-      { path: "/contact", element: <ContactsPage /> },
-      { path: "/cart", element: <Cart /> },
     ],
   },
 ]);

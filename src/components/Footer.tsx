@@ -26,14 +26,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary">
-                  Careers
-                </a>
+                <Link to="/services" className="hover:text-secondary">
+                  Services
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary">
-                  News
-                </a>
+                <Link to="/careers" className="hover:text-secondary">
+                  Career
+                </Link>
               </li>
             </ul>
           </div>
@@ -56,12 +56,18 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/legallayout/privacy" className="hover:text-secondary">
+                <Link
+                  to="/legallayout/privacy"
+                  className="hover:text-secondary"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/legallayout/termsofuse" className="hover:text-secondary">
+                <Link
+                  to="/legallayout/termsofuse"
+                  className="hover:text-secondary"
+                >
                   Terms of Service
                 </Link>
               </li>
