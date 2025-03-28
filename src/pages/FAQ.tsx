@@ -7,11 +7,11 @@ import faqData from "../data/faqData";
 const Faq = () => {
   const ref = useRef(null);
   return (
-    <div className="font-darkerGrotesque">
+    <div className="font-darkerGrotesque pt-10">
       <h1 className="text-4xl font-bold text-center text-black mb-4">
         Frequently Asked Questions
       </h1>
-      <p className="text-center text-gray-500 mb-8">
+      <p className="text-center text-xl text-gray-500 mb-8">
         Get answers to some of the most common questions.
       </p>
       <motion.div

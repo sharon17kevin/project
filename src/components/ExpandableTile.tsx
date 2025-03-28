@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -12,6 +13,7 @@ const ExpandableTile = ({ title, description }: Props) => {
   const toggleTile = (flag: boolean) => {
     setExpandTile(flag);
   };
+  const navigate = useNavigate();
   return (
     <div className="flex-col">
       <div className="h-14 bg-white flex rounded-md overflow-hidden justify-start">
@@ -27,7 +29,7 @@ const ExpandableTile = ({ title, description }: Props) => {
       </div>
       {expandTile && (
         <div className="bg-customBlue-light px-2 font-darkerGrotesque h-32 w-full flex justify-center items-center">
-          <p>{description.substring(0, 300)}</p> <button className="text-blue-500">more</button>
+          <p>{description.substring(0, 300)}</p> <button onClick={()=>navigate('/faq')} className="text-blue-500">more</button>
         </div>
       )}
     </div>
