@@ -1,11 +1,11 @@
 import { Menu, X } from "lucide-react";
-import { useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { CgClose } from "react-icons/cg";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Cart from "../icons/Cart";
 import Logo from "../icons/Logo";
 import Search from "../icons/Search";
-import Cart from "../icons/Cart";
 import SearchInput from "./SearchInput";
-import { CgClose } from "react-icons/cg";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +15,7 @@ const NavBar = () => {
   const closeAlert = () => setIsVisible(false);
 
   const location = useLocation();
+  const navigate = useNavigate()
 
   return (
     <nav
@@ -24,7 +25,7 @@ const NavBar = () => {
     >
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" flex h-16 justify-between">
-          <div className=" flex items-center">
+          <div className=" flex items-center" onClick={()=> navigate('/')}>
             <Logo />
             <span
               className={`ml-3 text-xl font-darkerGrotesque font-bold  ${
@@ -104,13 +105,13 @@ const NavBar = () => {
                 onClick={showAlert}
                 className="w-10 h-10 bg-customBlue-light flex items-center justify-center rounded-full hover:bg-gray-400 transition-colors duration-300 cursor-pointer"
               >
-                <Search />
+                {<Search />}
               </button>
             </div>
             <div className="flex items-center justify-center">
-              <div className="w-10 h-10 bg-customBlue-light flex items-center justify-center rounded-full hover:bg-gray-400 transition-colors duration-300 cursor-pointer">
+              <Link to="/cart" className="w-10 h-10 bg-customBlue-light flex items-center justify-center rounded-full hover:bg-gray-400 transition-colors duration-300 cursor-pointer">
                 <Cart />
-              </div>
+              </Link>
             </div>
           </div>
 

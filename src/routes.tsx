@@ -11,6 +11,7 @@ import { PrivacyPolicy } from "./pages/PrivacyPage";
 import { TermsOfUse } from "./pages/TermsOfUsePage";
 import { Legal } from "./pages/LegalPage";
 import { LegalLayout } from "./components/LegalLayout";
+import Cart from "./pages/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
         ],
       },
       { path: "/contact", element: <ContactsPage /> },
+      { path: "/cart", element: <Cart /> },
     ],
   },
 ]);
