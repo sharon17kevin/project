@@ -13,6 +13,7 @@ import { Legal } from "./pages/LegalPage";
 import { LegalLayout } from "./components/LegalLayout";
 import Cart from "./pages/CartPage";
 import Careers from "./pages/Careers";
+import ServiceMorePage from "./components/services/ServiceMorePage";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,13 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <AboutPage /> },
-      { path: "/services", element: <ServicesPage /> },
+      {
+        path: "/services",
+        element: <ServicesPage />,
+        children: [
+          { path: "/services/more", element: <ServiceMorePage /> },
+        ],
+      },
       { path: "/products", element: <ProductsPage /> },
       { path: "/faq", element: <Faq /> },
       { path: "/contact", element: <ContactsPage /> },

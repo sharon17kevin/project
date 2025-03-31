@@ -14,12 +14,12 @@ const AboutHeroSection = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.5}>
             <p className="font-ebgaramond mt-9 text-sm md:text-base text-black mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              We specialize in delivering cutting-edge telecommunication
+              services and sustainable solar energy solutions to keep you
+              connected and powered efficiently. Our mission is to provide
+              innovative, cost-effective, and eco-friendly technologies that
+              enhance communication and energy independence for businesses and
+              households alike. nulla pariatur.
             </p>
           </RevealAnimation>
         </div>

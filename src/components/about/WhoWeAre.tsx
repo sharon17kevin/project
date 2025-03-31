@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import construction from "../../assets/guysConstruct.webp";
 import { BsArrowUpRight } from "react-icons/bs";
 import { RevealAnimation } from "../RevealAnimation";
 
 const WhoWeAre = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white w-full flex flex-col items-center pb-10">
       <div className="pt-8 mt-5 flex items-center justify-center">
@@ -22,18 +23,26 @@ const WhoWeAre = () => {
                 We Provide Telecommunication and Solar Energy Solutions
               </p>
               <p className="font-ebgaramond mt-9 text-sm md:text-base text-black mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+                We are a technology-driven company dedicated to providing
+                top-tier telecommunication and solar energy solutions. With a
+                commitment to innovation and sustainability, we empower
+                businesses and individuals with reliable communication networks
+                and renewable energy systems. Our team of experts brings years
+                of experience in delivering high-quality, cost-effective, and
+                efficient solutions tailored to meet the evolving needs of our
+                clients.
               </p>
               <div className="flex space-x-2">
-                <Link to={'/products'} className="bg-secondary px-4 py-3 rounded-full">
+                <Link
+                  to={"/products"}
+                  className="bg-secondary px-4 py-3 rounded-full"
+                >
                   Visit Our Store
                 </Link>
-                <Link to={'/'} className="bg-primary px-4 py-3 text-black rounded-full">
+                <Link
+                  to={"/services/more"}
+                  className="bg-primary px-4 py-3 text-black rounded-full"
+                >
                   Learn More
                 </Link>
               </div>
@@ -65,7 +74,10 @@ const WhoWeAre = () => {
                     className="w-full h-full object-cover clip-polygon"
                   />
                 </div>
-                <button className="bg-primary rounded shadow-md p-3 row-span-2 flex items-center justify-center">
+                <button
+                  onClick={() => navigate("/services")}
+                  className="bg-primary rounded shadow-md p-3 row-span-2 flex items-center justify-center"
+                >
                   <div className="w-full h-full flex flex-col">
                     <div className="h-1/2 w-full flex justify-end">
                       <BsArrowUpRight />

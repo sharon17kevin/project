@@ -142,7 +142,7 @@ const NavBar = () => {
               HOME
             </Link>
             <Link
-              to="#/about"
+              to="/about"
               className="block px-3 py-2 text-gray-600 hover:text-blue-600"
             >
               ABOUT
