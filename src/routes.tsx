@@ -1,19 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
+import { LegalLayout } from "./components/LegalLayout";
+import ServiceMorePage from "./components/services/ServiceMorePage";
+import AboutPage from "./pages/AboutPage";
+import Careers from "./pages/Careers";
+import Cart from "./pages/CartPage";
+import ContactsPage from "./pages/ContactPage";
+import ErrorPage from "./pages/ErrorPage";
+import Faq from "./pages/FAQ";
 import HomePage from "./pages/HomePage";
 import Layout from "./pages/Layout";
-import ErrorPage from "./pages/ErrorPage";
-import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
-import ProductsPage from "./pages/ProductsPage";
-import Faq from "./pages/FAQ";
-import ContactsPage from "./pages/ContactPage";
-import { PrivacyPolicy } from "./pages/PrivacyPage";
-import { TermsOfUse } from "./pages/TermsOfUsePage";
 import { Legal } from "./pages/LegalPage";
-import { LegalLayout } from "./components/LegalLayout";
-import Cart from "./pages/CartPage";
-import Careers from "./pages/Careers";
-import ServiceMorePage from "./components/services/ServiceMorePage";
+import { PrivacyPolicy } from "./pages/PrivacyPage";
+import ProductsPage from "./pages/ProductsPage";
+import ServicesPage from "./pages/ServicesPage";
+import { TermsOfUse } from "./pages/TermsOfUsePage";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <ServicesPage />,
-        children: [
-          { path: "/services/more", element: <ServiceMorePage /> },
-        ],
+        // children: [
+        //   { path: "/services/more", element: <ServiceMorePage /> },
+        // ],
       },
+      { path: "/services/more", element: <ServiceMorePage /> },
       { path: "/products", element: <ProductsPage /> },
       { path: "/faq", element: <Faq /> },
       { path: "/contact", element: <ContactsPage /> },

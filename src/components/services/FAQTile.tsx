@@ -16,8 +16,8 @@ const FAQTile = ({ title, description, index, isFirst=false }: Props) => {
   };
   return (
     <div className={`font-darkerGrotesque text-xl text-black flex-col border border-b-black border-x-transparent ${isFirst? "border-t-black": "border-t-transparent"}`} onClick={() => toggleTile(!expandTile)}>
-      <div className="h-14 flex overflow-hidden justify-start">
-        <div className=" h-14 px-3 flex flex-1 justify-start items-center">
+      <div className="py-3 flex overflow-hidden justify-start">
+        <div className=" py-3 px-3 flex flex-1 justify-start items-center">
           <p>{title}</p>
         </div>
         <div

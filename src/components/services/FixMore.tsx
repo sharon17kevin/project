@@ -1,4 +1,7 @@
-import Footer from "../Footer";
+import { motion } from "motion/react";
+import { useRef } from "react";
+import sampleImage from "../../assets/guysConstruct.webp";
+import ExpandableTile from "../ExpandableTile";
 
 const services = [
   {
@@ -92,76 +95,88 @@ const services = [
     ],
   },
 ];
+const FixMore = () => {
+  const ref = useRef(null);
 
-const ServiveMorePage = () => {
   return (
-    <>
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center text-black mb-4">
-          Explore Our Comprehensive Services
-        </h1>
-        <p className="text-center text-gray-900 mb-12 max-w-2xl mx-auto">
-          Beyond telecommunication and solar energy, we offer a wide range of
-          innovative solutions tailored to meet your needs. Discover how we can
-          help you stay connected, powered, and ahead of the curve.
-        </p>
-        <div className="space-y-24">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`flex flex-col lg:flex-row gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+    <section ref={ref} className="w-full">
+      <div className="max-w-[90vw] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    duration: 0.2,
+                    staggerChildren: 0.2,
+                    when: "beforeChildren",
+                  },
+                },
+              }}
+              whileInView="visible"
+              viewport={{ root: ref, once: true, amount: 0.3 }}
+              initial="hidden"
+              className="p-4 flex flex-col"
             >
-              <div className="w-full lg:w-1/2">
-                <img
-                  src={`${service.image}?auto=format&fit=crop&w=800&q=80`}
-                  alt={service.title}
-                  className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                />
-              </div>
-              <div className="w-full lg:w-1/2 space-y-6">
-                <div className="flex items-center gap-3">
-                  <h2 className="text-3xl font-bold text-black">
-                    {service.title}
-                  </h2>
-                </div>
-                <p className="text-gray-900 text-lg">{service.description}</p>
-                <div className="space-y-4">
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center text-gray-900"
-                      >
-                        <span className="w-2 h-2 bg-secondary rounded-full mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: {
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        duration: 0.2,
+                      },
+                    },
+                  }}
+                >
+                  <div className="w-full">
+                    <div className="w-full">
+                      <img
+                        src={`${service.image}?auto=format&fit=crop&w=800&q=80`}
+                        alt={service.title}
+                        className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
+                      />
+                    </div>
+                    <div className="w-full lg:w-1/2 space-y-6">
+                      <div className="flex items-center gap-3">
+                        <h2 className="text-3xl font-bold text-black">
+                          {service.title}
+                        </h2>
+                      </div>
+                      <p className="text-gray-900 text-lg">
+                        {service.description}
+                      </p>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-semibold text-black">
+                          Key Features
+                        </h3>
+                        <ul className="space-y-2">
+                          {service.features.map((feature) => (
+                            <li
+                              key={feature}
+                              className="flex items-center text-gray-900"
+                            >
+                              <span className="w-2 h-2 bg-secondary rounded-full mr-3" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
-      <div className="bg-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Connectivity?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our services can be tailored to meet your specific
-            needs.
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
-            Schedule a Consultation
-          </button>
-        </div>
-      </div>
-      <Footer />
-    </>
+    </section>
   );
 };
 
-export default ServiveMorePage;
+export default FixMore;

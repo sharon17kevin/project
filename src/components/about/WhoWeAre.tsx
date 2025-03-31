@@ -40,7 +40,7 @@ const WhoWeAre = () => {
                   Visit Our Store
                 </Link>
                 <Link
-                  to={"/services/more"}
+                  to="/services/more"
                   className="bg-primary px-4 py-3 text-black rounded-full"
                 >
                   Learn More

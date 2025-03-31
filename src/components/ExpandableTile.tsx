@@ -28,7 +28,7 @@ const ExpandableTile = ({ title, description }: Props) => {
         </div>
       </div>
       {expandTile && (
-        <div className="bg-customBlue-light px-2 font-darkerGrotesque h-32 w-full flex justify-center items-center">
+        <div className="bg-customBlue-light px-2 font-darkerGrotesque py-2 w-full flex justify-center items-center">
           <p>{description.substring(0, 300)}</p> <button onClick={()=>navigate('/faq')} className="text-blue-500">more</button>
         </div>
       )}
