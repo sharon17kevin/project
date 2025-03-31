@@ -1,4 +1,4 @@
-import process from '../../assets/process.webp'
+import process from "../../assets/process.webp";
 
 const OurProcess = () => {
   return (
@@ -8,10 +8,14 @@ const OurProcess = () => {
           Our Process
         </h2>
         <div className="flex justify-center w-full">
-          <div className="flex align-middle w-full md:w-2/5">
-            <h3 className="font-ebgaramond text-center text-sm md:text-base text-black mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <div className="flex align-middle w-full md:w-3/5">
+            <h3 className="font-ebgaramond text-center text-base md:text-xl text-black mb-6">
+              Our structured approach ensures efficiency from start to finish.
+              We begin with in-depth requirement analysis and feasibility
+              studies, followed by precision-driven design and blueprinting. Our
+              swift installation and rigorous testing guarantee seamless
+              performance, with ongoing routine maintenance for long-term
+              reliability.
             </h3>
           </div>
         </div>
