@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 
 const services = [
@@ -94,6 +95,7 @@ const services = [
 ];
 
 const ServiveMorePage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -154,7 +156,7 @@ const ServiveMorePage = () => {
             Let's discuss how our services can be tailored to meet your specific
             needs.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
+          <button onClick={()=>navigate('/contact')} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
             Schedule a Consultation
           </button>
         </div>
