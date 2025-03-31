@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import audit from "../../assets/audit.webp";
 import handBulb from "../../assets/hand-bulb.webp";
 import Carousel from "../Carousel";
+import { useNavigate } from "react-router-dom";
 
 interface ItemProps {
   title: string;
@@ -10,6 +11,7 @@ interface ItemProps {
 }
 
 const CarouselContent = ({ title, subtitle, image = audit }: ItemProps) => {
+  const navigate = useNavigate()
   return (
     <div className="w-full flex mx-auto h-[430px] px-4 sm:px-6 lg:px-12 ">
       <div className="flex flex-col h-full items-center md:flex-row w-full">
@@ -23,7 +25,7 @@ const CarouselContent = ({ title, subtitle, image = audit }: ItemProps) => {
               {subtitle}
             </p>
           </div>
-          <button className="bg-primary mt-4 px-5 py-2 rounded-full text-black md:text-lg">
+          <button onClick={()=>navigate('/services/more')} className="bg-primary mt-4 px-3 py-1 text-sm rounded-full text-black md:text-lg md:py-2 md:px-5">
             Learn More
           </button>
         </div>

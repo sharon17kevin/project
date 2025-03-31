@@ -4,27 +4,27 @@ import { PersonCard } from './quoteData';
 const teamSlides : PersonCard[] = [
     {
         image: construcion,
+        title: "MD Kelvic Tech",
+        content: "Sustainability and efficiency go hand in hand. We are committed to pushing the boundaries of innovation to power a better future.",
+        name: "Anyanwu Chukwudi"
+    },
+    {
+        image: construcion,
         title: "Financial Advisor",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        content: "Innovation drives everything we do. We believe in creating sustainable and efficient solutions that make a real difference.",
         name: "Okezie Emmanuel"
     },
     {
         image: construcion,
         title: "Tech Associate",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        name: "Okezie Emmanuel"
+        content: "Technology is only as powerful as the people who use it. Our goal is to make complex solutions simple and accessible.",
+        name: "Chukwumereije Daniel"
     },
     {
         image: construcion,
         title: "Sales Associate",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        name: "Okezie Emmanuel"
-    },
-    {
-        image: construcion,
-        title: "MD Kelvic Tech",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        name: "Okezie Emmanuel"
+        content: "Great service starts with great teamwork. We work together to deliver reliable and high-quality solutions to our clients.",
+        name: "Makinde Solomon"
     },
     
 ]
