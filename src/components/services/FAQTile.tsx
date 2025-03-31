@@ -27,7 +27,7 @@ const FAQTile = ({ title, description, index, isFirst=false }: Props) => {
         </div>
       </div>
       {expandTile && (
-        <div className=" h-32 w-full flex justify-center items-center">
+        <div className="py-2 px-2 w-full flex justify-center items-center">
           <p>{description}</p>
         </div>
       )}
