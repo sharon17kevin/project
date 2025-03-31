@@ -8,8 +8,8 @@ const Faq = () => {
   const ref = useRef(null);
   return (
     <>
-      <div className="font-darkerGrotesque pt-10">
-        <h1 className="text-4xl font-bold text-center text-black mb-4">
+      <div className="font-darkerGrotesque pt-10 px-2">
+        <h1 className=" text-2xl md:text-4xl font-bold text-center text-black mb-4">
           Frequently Asked Questions
         </h1>
         <p className="text-center text-xl text-gray-500 mb-8">
