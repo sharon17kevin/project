@@ -25,7 +25,7 @@ const NavBar = () => {
     >
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" flex h-16 justify-between">
-          <div className=" flex items-center" onClick={()=> navigate('/')}>
+          <div className=" flex items-center cursor-pointer" onClick={()=> navigate('/')}>
             <Logo />
             <span
               className={`ml-3 text-xl font-darkerGrotesque font-bold  ${

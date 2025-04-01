@@ -18,12 +18,12 @@ const ExpandableTile = ({ title, description }: Props) => {
     <div className="flex-col">
       <div className="h-14 bg-white flex rounded-md overflow-hidden justify-start">
         <button
-          className="bg-slate-200 h-full w-10"
+          className="bg-slate-200 h-full w-1/5 md:w-10"
           onClick={() => toggleTile(!expandTile)}
         >
           {expandTile ? "-" : "+"}
         </button>
-        <div className=" h-14 px-3 flex justify-center items-center">
+        <div className=" h-14 w-4/5 md:w-auto px-3 flex justify-center items-center">
           <p>{title}</p>
         </div>
       </div>
