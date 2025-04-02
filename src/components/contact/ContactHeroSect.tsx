@@ -11,7 +11,7 @@ const ContactsHeroSect = () => {
     offset: ["start end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2], {
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.4], {
     clamp: false,
   });
 
@@ -19,19 +19,20 @@ const ContactsHeroSect = () => {
     <div className="w-full pt-6">
       <div
         ref={containerRef}
-        className="relative max-w-[90vw] max-h-screen rounded-3xl overflow-hidden mx-20"
+        className="relative max-w-[100vw] md:max-w-[90vw] h-[100vh] md:max-h-[90vh] rounded-3xl overflow-hidden mx-20"
       >
         <motion.div
           style={{ scale }}
           transition={{ ease: [0.25, 0.1, 0.25, 1] }}
+          className="w-full h-full"
         >
           <img
             src={heroImage}
             alt="Responsive Image"
-            className="w-full mx-auto"
+            className="w-full h-full object-cover"
           />
         </motion.div>
-        <div className="absolute bottom-10 left-10 flex flex-col font-darkerGrotesque text-4xl font-semibold text-white">
+        <div className="absolute bottom-10 left-10 flex flex-col font-darkerGrotesque text-2xl md:text-4xl font-semibold text-white">
           <p>
             <RevealAnimation>
               {["We are here. Ask us Anything."]}
