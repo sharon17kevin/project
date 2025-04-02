@@ -19,7 +19,7 @@ const ContactsHeroSect = () => {
     <div className="w-full pt-6">
       <div
         ref={containerRef}
-        className="relative max-w-[100vw] md:max-w-[90vw] h-[100vh] md:max-h-[90vh] rounded-3xl overflow-hidden mx-20"
+        className="relative max-w-[97vw] md:max-w-[90vw] h-[100vh] md:max-h-[90vh] rounded-3xl overflow-hidden mx-9"
       >
         <motion.div
           style={{ scale }}
