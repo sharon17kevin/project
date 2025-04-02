@@ -19,7 +19,7 @@ const CareerHeroSect = () => {
     <div className="w-full pt-6">
       <div
         ref={containerRef}
-        className="relative max-w-[97vw] md:max-w-[90vw] h-[100vh] md:max-h-[90vh] rounded-3xl overflow-hidden mx-9"
+        className="relative max-w-[97vw] md:max-w-[90vw] h-[100vh] md:max-h-[90vh] rounded-3xl overflow-hidden mx-10 md:mx-auto"
       >
         <motion.div
           style={{ scale }}
